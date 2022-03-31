@@ -1,15 +1,24 @@
 import React from 'react';
-import CustomLink from '../../CustomLink/CustomLink';
+import { Link } from 'react-router-dom';
+ 
 
 const Header = () => {
     return (
         <div>
             <h2>This is a my fancy routering</h2>
-            <div style={{display:'flex', justifyContent: 'center' }}>
+            <nav>
+                <Link to="/">Home</Link>
+                <Link to="/friends">Friend</Link>
+                <Link to="/post">Post</Link>
+                <Link to="/about">About</Link>
+            </nav>
+            {/* <div style={{display:'flex', justifyContent: 'center' }}>
             <CustomLink to="/">Home</CustomLink>
             <CustomLink to='/friends'>Friend</CustomLink>
+            <CustomLink to='/friend/:friendId'></CustomLink>
             <CustomLink to='/about'>About</CustomLink>
-            </div>
+            <CustomLink to='/post'></CustomLink>
+            </div> */}
         </div>
     );
 };
